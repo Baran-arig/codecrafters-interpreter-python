@@ -28,7 +28,7 @@ def main():
             elif(char == ')'):
                 print('RIGHT_PAREN ) null')
             
-        print('EOF null')
+        print('EOF  null')
     else:
          print("EOF  null") # Placeholder, remove this line when implementing the scanner
          
