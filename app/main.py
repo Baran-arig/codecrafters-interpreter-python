@@ -22,7 +22,7 @@ def main():
     # Uncomment this block to pass the first stage
     if file_contents:
          #raise NotImplementedError("Scanner not implemented")
-         line_number = 0
+        line_number = 0
         for char in file_contents:
             if(char == '/n'):
                 line_number += 1
