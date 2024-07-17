@@ -23,6 +23,7 @@ def main():
     if file_contents:
          #raise NotImplementedError("Scanner not implemented")
         line_number = 1
+        error_flag = False
         for char in file_contents:
             if(char == '/n'):
                 line_number += 1
@@ -48,9 +49,12 @@ def main():
             elif(char == '*'):
                 print('STAR * null')
             else:
+                error_flag = True
                 print(f'[line {line_number}] Error: Unexpected character: {char}', file=sys.stderr)
-                print('EOF  null')
-                sys.exit(65)
+                
+        if(error_flag == True):
+            print('EOF  null')
+            sys.exit(65)
 
             
         print('EOF  null')
