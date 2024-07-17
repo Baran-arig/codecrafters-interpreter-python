@@ -49,6 +49,7 @@ def main():
                 print('STAR * null')
             else:
                 print(f'[line {line_number}] Error: Unexpected character: {char}', file=sys.stderr)
+                sys.exit(65)
 
             
         print('EOF  null')
