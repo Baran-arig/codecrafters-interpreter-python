@@ -22,7 +22,11 @@ def main():
     # Uncomment this block to pass the first stage
     if file_contents:
          #raise NotImplementedError("Scanner not implemented")
+         line_number = 0
         for char in file_contents:
+            if(char == '/n'):
+                line_number += 1
+
             if (char == '('):
                 print('LEFT_PAREN ( null')
             elif(char == ')'):
@@ -43,7 +47,9 @@ def main():
                 print('SEMICOLON ; null')
             elif(char == '*'):
                 print('STAR * null')
-                
+            else:
+                print(f'[line {line_number}] Error: Unexpected character: {char}', file=sys.stderr)
+
             
         print('EOF  null')
     else:
