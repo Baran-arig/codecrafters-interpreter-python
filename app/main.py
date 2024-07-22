@@ -57,7 +57,7 @@ def main():
             
             else:
                 error_flag = True
-                print(f'[line {line_number}] Error: Unexpected character: {char}', file=sys.stderr)
+                print(f'[line {line_number}] Error: Unexpected character: {file_contents[i]}', file=sys.stderr)
                 
         if(error_flag):
             print('EOF  null')
