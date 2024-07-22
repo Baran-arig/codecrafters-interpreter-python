@@ -64,6 +64,23 @@ def main():
                     
                 else:
                     print('BANG ! null')
+
+            elif(file_contents[i] == '<'):
+                if(i < len(file_contents)-1 and file_contents[i+1] == '='):
+                    i+=1
+                    print('LESS_EQUAL <= null')
+                
+                else:
+                    print('LESS < null')
+
+            elif(file_contents[i] == '>'):
+                if(i < len(file_contents)-1 and file_contents[i+1] == '='):
+                    i+=1
+                    print('GREATER_EQUAL >= null')
+                
+                else:
+                    print('GREATER > null')
+
             
             else:
                 error_flag = True
