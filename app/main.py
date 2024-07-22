@@ -24,7 +24,8 @@ def main():
          #raise NotImplementedError("Scanner not implemented")
         line_number = 1
         error_flag = False
-        for i in range(len(file_contents)):
+        i=0
+        while i < len(file_contents):
             if(file_contents[i] == '/n'):
                 line_number += 1
 
@@ -50,18 +51,23 @@ def main():
                 print('STAR * null')
             elif(file_contents[i] =='='):
                 if( i < len(file_contents)-1) and file_contents[i+1] == '=':
+                    i+=1
+                    print(i)
                     print('EQUAL_EQUAL == null')
-                    i += 1
+                    
                 else:
                     print('EQUAL = null')
             
             else:
                 error_flag = True
                 print(f'[line {line_number}] Error: Unexpected character: {file_contents[i]}', file=sys.stderr)
+            i+=1
                 
         if(error_flag):
             print('EOF  null')
             sys.exit(65)
+        
+            
 
             
         print('EOF  null')
