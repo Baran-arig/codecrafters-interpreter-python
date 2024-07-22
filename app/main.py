@@ -90,7 +90,7 @@ def main():
                 else:
                     print('SLASH / null')
 
-            elif(file_contents[i] == ' ' or file_contents[i] == '\t'):
+            elif(file_contents[i] == ' ' or file_contents[i] == '/t'):
                 i+=1
                 
 
