@@ -49,7 +49,7 @@ def main():
             elif(file_contents[i] == '*'):
                 print('STAR * null')
             elif(file_contents[i] =='='):
-                if( i < len(file_contents)) and file_contents[i+1] == '=':
+                if( i < len(file_contents)-1) and file_contents[i+1] == '=':
                     print('EQUAL_EQUAL == null')
                     i += 1
                 else:
