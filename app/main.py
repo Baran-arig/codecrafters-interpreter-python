@@ -52,7 +52,6 @@ def main():
             elif(file_contents[i] =='='):
                 if( i < len(file_contents)-1) and file_contents[i+1] == '=':
                     i+=1
-                    print(i)
                     print('EQUAL_EQUAL == null')
                     
                 else:
