@@ -24,7 +24,7 @@ def main():
          #raise NotImplementedError("Scanner not implemented")
         line_number = 1
         error_flag = False
-        for i in file_contents:
+        for i in range(len(file_contents)):
             if(file_contents[i] == '/n'):
                 line_number += 1
 
