@@ -24,35 +24,42 @@ def main():
          #raise NotImplementedError("Scanner not implemented")
         line_number = 1
         error_flag = False
-        for char in file_contents:
-            if(char == '/n'):
+        for i in file_contents:
+            if(file_contents[i] == '/n'):
                 line_number += 1
 
-            if (char == '('):
+            if (file_contents[i] == '('):
                 print('LEFT_PAREN ( null')
-            elif(char == ')'):
+            elif(file_contents[i] == ')'):
                 print('RIGHT_PAREN ) null')
-            elif(char == '{'):
+            elif(file_contents[i] == '{'):
                 print('LEFT_BRACE { null')
-            elif(char == '}'):
+            elif(file_contents[i] == '}'):
                 print('RIGHT_BRACE } null')
-            elif(char == ','):
+            elif(file_contents[i] == ','):
                 print('COMMA , null')
-            elif(char == '.'):
+            elif(file_contents[i] == '.'):
                 print('DOT . null')
-            elif(char == '-'):
+            elif(file_contents[i] == '-'):
                 print('MINUS - null')
-            elif(char == '+'):
+            elif(file_contents[i] == '+'):
                 print('PLUS + null')
-            elif(char == ';'):
+            elif(file_contents[i] == ';'):
                 print('SEMICOLON ; null')
-            elif(char == '*'):
+            elif(file_contents[i] == '*'):
                 print('STAR * null')
+            elif(file_contents[i] =='=' and i != len(file_contents)-1):
+                if(file_contents[i+1] == '='):
+                    print('EQUAL_EQUAL == null')
+                    i += 1
+                else:
+                    print('EQUAL = null')
+            
             else:
                 error_flag = True
                 print(f'[line {line_number}] Error: Unexpected character: {char}', file=sys.stderr)
                 
-        if(error_flag == True):
+        if(error_flag):
             print('EOF  null')
             sys.exit(65)
 
