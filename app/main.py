@@ -84,7 +84,7 @@ def main():
             elif(file_contents[i] == '/'):
                 if(i < len(file_contents)-1 and file_contents[i+1] == '/'):
                     i+=1
-                    while(file_contents[i] != '/n'):
+                    while(i < len(file_contents)-1 and file_contents[i] != '/n'):
                         i+=1
                 
                 else:
