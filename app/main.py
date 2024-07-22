@@ -53,9 +53,17 @@ def main():
                 if( i < len(file_contents)-1) and file_contents[i+1] == '=':
                     i+=1
                     print('EQUAL_EQUAL == null')
-                    
+
                 else:
                     print('EQUAL = null')
+            
+            elif(file_contents[i] =='!'):
+                if( i < len(file_contents)-1) and file_contents[i+1] == '=':
+                    i+=1
+                    print('BANG_EQUAL != null')
+                    
+                else:
+                    print('BANG ! null')
             
             else:
                 error_flag = True
