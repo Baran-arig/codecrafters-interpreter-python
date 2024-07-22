@@ -48,8 +48,8 @@ def main():
                 print('SEMICOLON ; null')
             elif(file_contents[i] == '*'):
                 print('STAR * null')
-            elif(file_contents[i] =='=':
-                if( i != len(file_contents)-1) and file_contents[i+1] == '='):
+            elif(file_contents[i] =='='):
+                if( i != len(file_contents)-1) and file_contents[i+1] == '=':
                     print('EQUAL_EQUAL == null')
                     i += 1
                 else:
