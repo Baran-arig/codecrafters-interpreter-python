@@ -86,6 +86,7 @@ def main():
                     i+=1
                     while(i < len(file_contents)-1 and file_contents[i] != '\n'):
                         i+=1
+                        line_number += 1
                 
                 else:
                     print('SLASH / null')
