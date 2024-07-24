@@ -29,7 +29,7 @@ def main():
             if(file_contents[i] == '\n'):
                 line_number += 1
 
-            if (file_contents[i] == '('):
+            elif (file_contents[i] == '('):
                 print('LEFT_PAREN ( null')
             elif(file_contents[i] == ')'):
                 print('RIGHT_PAREN ) null')
@@ -90,7 +90,7 @@ def main():
                 else:
                     print('SLASH / null')
 
-            elif(file_contents[i] == ' ' or file_contents[i] == '\t' or file_contents[i] == '\n'):
+            elif(file_contents[i] == ' ' or file_contents[i] == '\t'):
                 i+=1
                 
 
