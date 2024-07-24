@@ -26,7 +26,7 @@ def main():
         error_flag = False
         i=0
         while i < len(file_contents):
-            if(file_contents[i] == '/n'):
+            if(file_contents[i] == '\n'):
                 line_number += 1
 
             if (file_contents[i] == '('):
@@ -84,13 +84,13 @@ def main():
             elif(file_contents[i] == '/'):
                 if(i < len(file_contents)-1 and file_contents[i+1] == '/'):
                     i+=1
-                    while(i < len(file_contents)-1 and file_contents[i] != '/n'):
+                    while(i < len(file_contents)-1 and file_contents[i] != '\n'):
                         i+=1
                 
                 else:
                     print('SLASH / null')
 
-            elif(file_contents[i] == ' ' or file_contents[i] == '/t'):
+            elif(file_contents[i] == ' ' or file_contents[i] == '\t' or file_contents[i] == '\n'):
                 i+=1
                 
 
