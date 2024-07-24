@@ -91,7 +91,8 @@ def main():
                     print('SLASH / null')
 
             elif(file_contents[i] == ' ' or file_contents[i] == '\t'):
-                i+=0
+                #i+=0
+                pass
                 #continue
                 
 
