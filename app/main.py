@@ -97,6 +97,7 @@ def main():
                 #continue
 
             elif(file_contents[i] == '"'):
+                i+= 1
                 string = ''
                 #counter = 0
                 while(file_contents[i] != '"'):
