@@ -100,7 +100,7 @@ def main():
                 i+= 1
                 string = ''
                 #counter = 0
-                while(file_contents[i] != '"'):
+                while(i < len(file_contents)-1 and  file_contents[i] != '"'):
 
                     if(i >= len(file_contents)):
                         error_flag = True
