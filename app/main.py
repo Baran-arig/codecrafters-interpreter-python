@@ -102,12 +102,14 @@ def main():
                 #counter = 0
                 while(i < len(file_contents)-1 and  file_contents[i] != '"'):
 
+                    string += file_contents[i]
+
                     if(i >= len(file_contents)):
                         error_flag = True
-                        print(f'[line {line_number}] Error: Unterminated String: {file_contents[i]}', file=sys.stderr)
+                        print(f'[line {line_number}] Error: Unterminated String: {string}', file=sys.stderr)
                         break
 
-                    string += file_contents[i]
+                    
                     i+=1
 
                 print(f'STRING "{string}" {string}')
