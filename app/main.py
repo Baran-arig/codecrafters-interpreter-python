@@ -101,7 +101,7 @@ def main():
                 string = ''
                 terminateFlag = False
                 #counter = 0
-                while(i < len(file_contents)-1):
+                while(i < len(file_contents)):
 
                     
                     if(file_contents[i] == '"'):
