@@ -120,8 +120,15 @@ def main():
 
             elif(file_contents[i].isnumeric() ):
                 num = ''
+                decimalValue = False
 
                 while(i <= len(file_contents)-1 and (file_contents[i].isnumeric() or file_contents[i] == '.') ):
+                    if(file_contents[i] =='.' and decimalValue):
+                        i-=1
+                        break
+                    if(file_contents[i] =='.'):
+                        decimalValue = True
+                    
                     num += file_contents[i]
                     i+= 1
                 
