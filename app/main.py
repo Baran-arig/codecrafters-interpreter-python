@@ -138,7 +138,7 @@ def main():
                 '''
                 if(num[-1] == '.'):
                     num = num[:-1]
-                    i-=1
+                    i-=2
                     print(f'NUMBER {num} {num}.0')
                 else:
                     print(f'NUMBER {num} {num}')
