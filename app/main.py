@@ -125,6 +125,9 @@ def main():
                     num += file_contents[i]
                     i+= 1
                 
+                if(not num[-1].isnumeric()):
+                    num = num[:-1]
+                    i-=2
                 print(f'NUMBER {num} {num}')
 
                 
