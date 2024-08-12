@@ -121,7 +121,7 @@ def main():
             elif(file_contents[i].isnumeric() ):
                 num = ''
 
-                while(i < len(file_contents[i])-1 and file_contents[i].isnumeric() or file_contents[i] == '.' ):
+                while(i < len(file_contents)-1 and (file_contents[i].isnumeric() or file_contents[i] == '.') ):
                     num += file_contents[i]
                     i+= 1
                 
