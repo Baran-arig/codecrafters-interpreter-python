@@ -117,6 +117,16 @@ def main():
                 if(not terminateFlag):
                     error_flag = True
                     print(f'[line {line_number}] Error: Unterminated string.', file=sys.stderr)
+
+            elif(file_contents[i].isnumeric() ):
+                num = ''
+
+                while(i < len(file_contents[i])-1 and file_contents[i].isnumeric or file_contents[i] == '.' ):
+                    num += file_contents[i]
+                    i+= 1
+                
+                print(f'NUMBER {num} {num}')
+
                 
                 
 
