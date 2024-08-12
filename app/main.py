@@ -99,20 +99,25 @@ def main():
             elif(file_contents[i] == '"'):
                 i+= 1
                 string = ''
+                terminateFlag = False
                 #counter = 0
-                while(i < len(file_contents)-1 and  file_contents[i] != '"'):
-
-                    string += file_contents[i]
-
-                    if(i >= len(file_contents)):
-                        error_flag = True
-                        print(f'[line {line_number}] Error: Unterminated String: {string}', file=sys.stderr)
-                        break
+                while(i < len(file_contents)-1):
 
                     
-                    i+=1
+                    if(file_contents[i] == '"'):
+                        print(f'STRING "{string}" {string}')
+                        terminateFlag = True
+                        break
 
-                print(f'STRING "{string}" {string}')
+                    #if(i >= len(file_contents)):
+                        
+
+                    string += file_contents[i]
+                    i+=1
+                if(not terminateFlag):
+                    error_flag = True
+                    print(f'[line {line_number}] Error: Unterminated String: {string}', file=sys.stderr)
+                
                 
 
                 
