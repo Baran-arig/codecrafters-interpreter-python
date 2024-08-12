@@ -116,7 +116,7 @@ def main():
                     i+=1
                 if(not terminateFlag):
                     error_flag = True
-                    print(f'[line {line_number}] Error: Unterminated String: {string}', file=sys.stderr)
+                    print(f'[line {line_number}] Error: Unterminated String', file=sys.stderr)
                 
                 
 
