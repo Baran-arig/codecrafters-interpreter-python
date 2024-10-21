@@ -137,7 +137,8 @@ def main():
                     i-=2
                 '''
                 num = float(num)
-                if(num.is_integer):
+                #print(num.is_integer)
+                if(num == int(num)):
                     #num = num[:-1]
                     #i-=2
                     print(f'NUMBER {int(num)} {int(num)}.0')
