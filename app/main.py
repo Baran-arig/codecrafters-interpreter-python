@@ -138,7 +138,7 @@ def main():
                 '''
                 num = float(num)
                 #print(num.is_integer)
-                if(num == int(num)):
+                if(not decimalValue):
                     #num = num[:-1]
                     #i-=2
                     print(f'NUMBER {int(num)} {int(num)}.0')
