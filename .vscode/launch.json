@@ -9,7 +9,7 @@
             "name": "Python Debugger: Current File with Arguments",
             "type": "debugpy",
             "request": "launch",
-            "program": "/Users/baranarig/codecrafters-interpreter-python/app/main.py",
+            "program": "${file}",
             "console": "integratedTerminal",
             "args": ["./your_program.sh", 
             "tokenize",
