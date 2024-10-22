@@ -121,6 +121,7 @@ def main():
             elif(file_contents[i].isnumeric() ):
                 num = ''
                 decimalValue = False
+                decimalPlaces = 0
 
                 while(i <= len(file_contents)-1 and (file_contents[i].isnumeric() or file_contents[i] == '.') ):
                     if(file_contents[i] =='.' and decimalValue):
@@ -129,6 +130,9 @@ def main():
                     if(file_contents[i] =='.'):
                         decimalValue = True
                     
+                    if(decimalValue):
+                        decimalPlaces += 1
+
                     num += file_contents[i]
                     i+= 1
                 '''
@@ -143,7 +147,7 @@ def main():
                     #i-=2
                     print(f'NUMBER {int(num)} {int(num)}.0')
                 else:
-                    print(f'NUMBER {num} {num}')
+                    print(f'NUMBER {num} {num:.decimalPlaces}')
 
                 
                 
