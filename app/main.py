@@ -144,7 +144,7 @@ def main():
                 #print(num.is_integer)
                 if(not decimalValue):
                     #num = num[:-1]
-                    #i-=2
+                    i-=1
                     print(f'NUMBER {int(num)} {int(num)}.0')
                 else:
                     print(f'NUMBER {num:.{decimalPlaces-1}f} {num}')
