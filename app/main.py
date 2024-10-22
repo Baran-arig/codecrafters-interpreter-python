@@ -147,7 +147,7 @@ def main():
                     #i-=2
                     print(f'NUMBER {int(num)} {int(num)}.0')
                 else:
-                    print(f'NUMBER {num} {num:.decimalPlaces}')
+                    print(f'NUMBER {num} {num:.{decimalPlaces}f}')
 
                 
                 
